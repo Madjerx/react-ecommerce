@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import Badge from '@mui/material/Badge';
-
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import Badge from "@mui/material/Badge";
 
 const Container = styled.div`
   height: 60px;
@@ -26,10 +26,10 @@ const Center = styled.div`
   flex: 1;
 `;
 const Right = styled.div`
-  display:flex;
-  justify-content:flex-end;
-  gap:1rem;
-  align-items:center;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
   flex: 1;
 `;
 
@@ -50,6 +50,7 @@ const Input = styled.input`
   border: none;
   background-color: var(--body-color);
   padding: 5px;
+  outline: none;
 `;
 const Logo = styled.h1`
   font-weight: var(--font-semi-bold);
@@ -75,8 +76,9 @@ const Navbar = () => {
           <Logo>Nike</Logo>
         </Center>
         <Right>
-          <MenuItem>S'inscrire</MenuItem>
-          <MenuItem>Se connecter</MenuItem>
+          <MenuItem>
+            <AccountCircleOutlinedIcon />
+          </MenuItem>
           <Badge badgeContent={1} color="primary">
             <ShoppingCartOutlinedIcon color="action" />
           </Badge>

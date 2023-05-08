@@ -105,6 +105,14 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  background-color: var(--title-color);
+  color: #fff;
+  border-radius: 30px;
+  padding: 6px 20px;
+}
+
+button:hover {
+  background-color: #757575;
 }
 
 img {
