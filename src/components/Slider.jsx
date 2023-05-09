@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import styled from "styled-components";
-import Slider1 from "../assets/github.jpeg";
+import Slider1 from "../assets/p1.png";
+import { sliderItems } from "../data";
 
 const Container = styled.div`
   width: 100%;
   height: calc(100vh - 90px);
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -26,10 +28,13 @@ const Arrow = styled.div`
   background-color: var(--border-color);
   border-radius: 5px;
   cursor: pointer;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
   height: calc(100vh - 90px);
+  display: flex;
+  transform: translateX(0vw);
 `;
 
 const Slide = styled.div`
@@ -37,13 +42,17 @@ const Slide = styled.div`
   width: 100vw;
   display: flex;
   align-items: center;
+  background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const Image = styled.img`
-  max-height: 80%;
+  /* max-height: 80%; */
 `;
 
 const InfoContainer = styled.div`
@@ -51,32 +60,42 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 
-const Title = styled.h1``;
-const Description = styled.div``;
+const Title = styled.h1`
+  text-transform: uppercase;
+`;
+const Description = styled.div`
+  margin: 2rem 0;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+`;
 const Button = styled.button``;
+
+// const [slideIndex, setSlideIndex] = useState(0);
+const handleClick = (direction) => {};
 
 const Slider = () => {
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftIcon />
       </Arrow>
       <Wrapper>
-        <Slide>
-          <ImgContainer>
-            <Image src={Slider1} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Soldes d'été</Title>
-            <Description>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
-              perspiciatis aliquid.
-            </Description>
-            <Button>Les promos</Button>
-          </InfoContainer>
-        </Slide>
+        {sliderItems.map((item) => {
+          return (
+            <Slide bg={item.bg}>
+              <ImgContainer>
+                <Image src={item.img} />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>{item.title}</Title>
+                <Description>{item.desc}</Description>
+                <Button>Les promos</Button>
+              </InfoContainer>
+            </Slide>
+          );
+        })}
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightIcon />
       </Arrow>
     </Container>

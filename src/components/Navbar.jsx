@@ -73,7 +73,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Nike</Logo>
+          <Logo>Air Shoes</Logo>
         </Center>
         <Right>
           <MenuItem>
