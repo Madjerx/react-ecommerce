@@ -1,27 +1,48 @@
-import Slider1 from './assets/p1.png'
-import Slider2 from './assets/p3.png'
-import Slider3 from './assets/p5.png'
+import Slider1 from "./assets/slide-1.png";
+import Slider2 from "./assets/slide-2.png";
+import Slider3 from "./assets/slide-3.png";
+import Product1 from "./assets/p1.png";
+import Product2 from "./assets/p3.png";
+import Product3 from "./assets/p5.png";
 
 export const sliderItems = [
-    {
-      id: 1,
-      img: Slider1,
-      title: "Nouvelle Air Jordan !",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
-    },
-    {
-      id: 2,
-      img: Slider2,
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
-    },
-    {
-      id: 3,
-      img: Slider3,
-      title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
-    },
-  ];
+  {
+    id: 1,
+    img: Product1,
+    title: "Nouvelle Air Jordan !",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "FAFAFA",
+  },
+  {
+    id: 2,
+    img: Product2,
+    title: "AUTUMN COLLECTION",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "FAFAFA",
+  },
+  {
+    id: 3,
+    img: Product3,
+    title: "LOUNGEWEAR LOVE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "FAFAFA",
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    img: Product1,
+    title: "Sneakers",
+  },
+  {
+    id: 2,
+    img: Product2,
+    title: "Chaussures Basketball",
+  },
+  {
+    id: 3,
+    img: Product3,
+    title: "Premium Sneakers",
+  },
+];
