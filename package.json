@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "styled-components": "^5.3.10"
   }
 }
